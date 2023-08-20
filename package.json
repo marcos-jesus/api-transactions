@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx watch ./src/server.ts",
+    "lint": "eslint src --ext .ts* .js --fix",
+    "knex": "node --loader tsx ./node_modules/knex/bin/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/node": "^20.5.1",
+    "eslint": "^8.47.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "knex": "^2.5.1",
+    "sqlite3": "^5.1.6"
+  }
+}
