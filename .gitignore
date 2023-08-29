@@ -2,3 +2,4 @@ database/app.db
 node_modules
 .env
 .vscode
+.env.test

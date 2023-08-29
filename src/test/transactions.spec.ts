@@ -1,4 +1,6 @@
-import { expect, describe, it, beforeAll, afterAll } from 'vitest'
+/* eslint-disable prettier/prettier */
+import { expect, describe, it, beforeAll, afterAll, beforeEach } from 'vitest'
+import { execSync } from 'node:child_process'
 import request from 'supertest'
 import { app } from '../app'
 
@@ -9,6 +11,12 @@ describe('Should expected make requests', () => {
 
   afterAll(async () => {
     await app.close()
+  })
+
+  beforeEach(() => {
+    execSync("npm run knex migrate:rollback --all")
+    execSync('npm run knex migrate:latest')
+
   })
 
   it('Should be created new transaction', async () => {
