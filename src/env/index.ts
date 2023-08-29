@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { config } from 'dotenv'
 import { z } from 'zod'
 
